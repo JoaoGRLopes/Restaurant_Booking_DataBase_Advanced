@@ -1,4 +1,4 @@
-package Server_NOT_IMPLEMENTEDAS_UML;
+package Server_NOT_IMPLEMENTED;
 
 import java.io.IOException;
 import java.net.ServerSocket;
