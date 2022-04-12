@@ -38,6 +38,7 @@ public class ClientHandler implements Runnable{
 
     @Override
     public void run() {
+
         try {
             System.out.println("Waiting for client");
             String lineRead;
