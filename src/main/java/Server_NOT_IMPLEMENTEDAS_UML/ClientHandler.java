@@ -1,4 +1,4 @@
-package Server;
+package Server_NOT_IMPLEMENTEDAS_UML;
 
 import SQLConnection.ConnectionClass;
 import java.io.BufferedReader;

@@ -24,8 +24,7 @@ import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static model.BookingStatus.BookingStatusOptions.CANCELLED;
-import static model.BookingStatus.BookingStatusOptions.CONFIRM;
+import static model.BookingStatus.BookingStatusOptions.*;
 
 public class Restaurant {
 	private JTextField nameTextField;
@@ -38,7 +37,7 @@ public class Restaurant {
 	private JButton submitButton;
 	private JLabel nameLabel;
 	private JLabel mobileNumberLabel;
-	private JLabel barberLabel;
+	private JLabel waiterLabel;
 	private JScrollPane jScrollPane;
 	private JTable jTable;
 	private JComboBox timeComboBox;
@@ -175,7 +174,7 @@ public class Restaurant {
 							JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
 							null, options, null);
 					if (result == JOptionPane.YES_OPTION) {
-						selector.updateStatus(CONFIRM.name(), jTable.getValueAt(jTable.getSelectedRow(), 0).toString());
+						selector.updateStatus(CONFIRMED.name(), jTable.getValueAt(jTable.getSelectedRow(), 0).toString());
 					} else if (result == JOptionPane.NO_OPTION) {
 						selector.updateStatus(CANCELLED.name(), jTable.getValueAt(jTable.getSelectedRow(), 0).toString());
 					}
@@ -204,7 +203,7 @@ public class Restaurant {
 		searchButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				RestaurantTableModel[0] = new BookingTableModel(selector.search(search.getText()));
+				RestaurantTableModel[0] = new BookingTableModel(selector.searchDataFromDatabase(search.getText()));
 				jTable.setModel(RestaurantTableModel[0]);
 			}
 		});

@@ -197,7 +197,7 @@ public class Selector {
 				"1:00 AM",};
 	}
 	//Serching for Customer Name
-	public List<Bookings.VBookings> search(String name) {
+	public List<Bookings.VBookings> searchDataFromDatabase(String name) {
 		List<Bookings.VBookings> bookingList = new ArrayList<>();
 
 		try {

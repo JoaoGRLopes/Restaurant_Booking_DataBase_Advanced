@@ -1,4 +1,4 @@
-package Server;
+package Server_NOT_IMPLEMENTEDAS_UML;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -27,7 +27,7 @@ public class ThreadedServer {
     }
 
     public static void main(String[] args) {
-        ThreadedServer simpleServer = new ThreadedServer();
-        simpleServer.connectClient();
+        ThreadedServer threadedServer = new ThreadedServer();
+        threadedServer.connectClient();
     }
 }
