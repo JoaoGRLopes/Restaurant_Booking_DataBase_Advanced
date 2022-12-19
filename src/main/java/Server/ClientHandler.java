@@ -1,4 +1,4 @@
-package Server_NOT_IMPLEMENTED;
+package Server;
 
 import SQLConnection.ConnectionClass;
 import java.io.BufferedReader;
